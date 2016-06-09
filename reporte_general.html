@@ -63,7 +63,13 @@
         <div class="columns six">
           <form>
             <label for="Edad">Edad:</label>
-            <input class="u-full-width" type="text" placeholder="Coloca tu edad con número en años.">
+            <select class="u-full-width" id="exampleRecipientInput">
+              <option value="menosquince">Menor de 15 años</option>
+              <option value="quince_veinte">Entre 15 y 20 años</option>
+              <option value="veinte_veinticintico">Entre 20 y 25 años</option>
+               <option value="veinticinco_treinta">Entre 25 y 30 años</option>
+              <option value="mas_treinta">Mayor de 30 años</option>
+            </select>
             <label for="Lugar">Sitio:</label>
             <select class="u-full-width" id="exampleRecipientInput">
               <option value="Casa">Hogar</option>
@@ -78,21 +84,79 @@
               <option value="Conocido">Conocido</option>
               <option value="RelPareja">Relación de pareja</option>
             </select>
+            <label for="denuncia">¿Denunciaste el caso ante una autoridad?</label>
+            <select class="u-full-width" id="exampleRecipientInput">
+              <option value="Si">Sí</option>
+              <option value="No">No</option>
+            </select>
           </form>
         </div>
         <div class="row align">
           <input class="button-primary" type="submit" value="Enviar">
         </div>
 </section>
-<section>
   
-</section>
-        <div class="row align">
-          <p>En caso de haber denunciado y haber sido tratada indignamente:</p>
-          <a class="button button-primary" href="reporta_juzgado.html">Continuar</a>
+<section>
+    <div class="container">
+      <div class="row">
+        <div class="six columns align">
+          <img class="img-responsive" src="images/primavera_violeta_mexico.jpg" alt="Estadística sobre la violencia de género en México. Reporte por las usuarias.">
+        </div>
+        <div class="six columns">
+          <p class="align">Las mujeres que visitan la aplicación, nos reportan lo siguiente:</p>
+          <table class="u-full-width">
+            <thead>
+              <tr>
+                <th>Rubro:</th>
+                <th>Mujeres:</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td id="acoso">Acoso</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td id="violacion">Violación</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td id="violencia">Violencia</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td id="pA">Pensión alimenticia</td>
+                <td></td>
+              </tr>
+            </tbody>
+
+          </table>
         </div>
       </div>
     </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="six columns">
+        <ul>
+          
+        </ul>
+
+      </div>
+      <div class="align six columns">
+        <img class="img-responsive" src="images/violencia-genero.bmp">
+      </div>
+    </div>
+  </div>
+</section>
+
+        <div class="row align">
+          <p>En caso de haber denunciado y haber sido tratada indignamente:</p>
+          <a class="button button-primary" id="entrar"href="reporta_juzgado.html">Continuar</a>
+        </div>
+      
       
 
 <footer class="footint">
@@ -107,7 +171,22 @@
     </div>
   </div>
 </footer>
+<!--CDN JQuery-->
+<script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
 
+<body> 
+<script language="javascript"> 
+var i = 0; 
+
+function contador() 
+{ 
+i = i + 1; 
+var btn = document.getElementById("boton"); 
+btn.value = "Presiona Aqui (" + i + ")"; 
+} 
+</script> 
+
+<input type="button" id="boton" value="Presiona Aqui" onclick="javascript: contador()" /> 
 </body>
 
 </html>
