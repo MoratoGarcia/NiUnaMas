@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>#Ni1+</title>
+  <meta name="description" content="Reporta casos de mala dirección en un MP.">
+  <meta name="author" content="#Ni1+">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+</head>
+
+<body>
+
+<nav class="nav">
+  <div class="container">
+    <div class="row">
+      <h1><strong><a class="logo" href="index.html" alt="Ni una más">#Ni1+</a></strong></h1>
+    </div>
+  </div>
+</nav>
+
+<header>
+  <div class="container">
+    <div class="row">
+     <h5 alt="Casos estadísticos de violencia de género"class="align">Proporcionanos algunos datos estadísticos, por favor.</h5>
+    </div>
+  </div>
+</header>
+
+<section>
+    <div class="container">
+      <div class="row">
+        <div class="lilabg">
+          <div class="columns six">
+            <div class="align">
+              <strong><p>¿Qué ocurrió?</p></strong>
+              <input id="contadoracoso" type="submit" value="Acoso" onclick="contador()">
+              <br>
+              <input id="" type="submit" value="Violación" onclick="contadorViola()">
+              <br>
+              <input id="contadorviolencia"type="submit" value="Violencia" onclick="contadorViolen()">
+              <br>
+              <input id="contador"type="submit" value="Pensión Alimenticia" onclick="contadorPena()">
+            </div>
+          </div>
+        </div>
+        <div class="columns six">
+          <form>
+            <label for="Edad">Edad:</label>
+            <select class="u-full-width" id="exampleRecipientInput">
+              <option value="menosquince">Menor de 15 años</option>
+              <option value="quince_veinte">Entre 15 y 20 años</option>
+              <option value="veinte_veinticintico">Entre 20 y 25 años</option>
+               <option value="veinticinco_treinta">Entre 25 y 30 años</option>
+              <option value="mas_treinta">Mayor de 30 años</option>
+            </select>
+            <label for="Lugar">Sitio:</label>
+            <select class="u-full-width" id="exampleRecipientInput">
+              <option value="Casa" onclick="contadorHoga()">Hogar</option>
+              <option value="Trabajo" onclick="contadorTrabaj()">Trabajo</option>
+              <option value="Sitio Público" onclick="contadorSiti()">Sitio Público</option>
+            </select>
+            <label for="Relación">Relación con el atacante:</label>
+            <select class="u-full-width" id="exampleRecipientInput">
+              <option value="Desconocido" onclick="contadorDesconocid()">Desconocido</option>
+              <option value="SubLab" onclick="contadorSuperio()">Superior laboral</option>
+              <option value="Familiar" onclick="contadorFamilia()">Familiar</option>
+              <option value="Conocido" onclick="contadorConocid()">Conocido</option>
+              <option value="RelPareja" onclick="contadorRelacio()">Relación de pareja</option>
+            </select>
+            <label for="denuncia">¿Denunciaste el caso ante una autoridad?</label>
+            <select class="u-full-width" id="exampleRecipientInput">
+              <option value="Si">Sí</option>
+              <option value="No">No</option>
+            </select>
+          </form>
+        </div>
+        <div class="row align">
+          <input class="button-primary" type="submit" value="Enviar">
+        </div>
+</section>
+
+<section>
+    <div class="container">
+      <div class="row">
+        <div class="six columns align">
+          <img class="img-responsive" src="images/primavera_violeta_mexico.jpg" alt="Estadística sobre la violencia de género en México. Reporte por las usuarias.">
+        </div>
+        <div class="six columns">
+          <p class="align">Las mujeres que visitan la aplicación, nos reportan lo siguiente:</p>
+          <table class="u-full-width">
+            <thead>
+              <tr>
+                <th>Rubro:</th>
+                <th>Mujeres:</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td >Acoso
+                <p id="acoso">
+
+                </p></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td >Violación
+                  <p id="violacion">
+
+                </p></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td >Violencia
+                  <p id="violencia">
+
+                </p></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td >Pensión alimenticia
+                  <p id="pension">
+
+                </p></td>
+                <td></td>
+
+              </tr>
+            </tbody>
+
+          </table>
+        </div>
+      </div>
+    </div>
+</section>
+<section >
+    <div class="container">
+      <div class="row">
+        <div class="six columns align">
+        </div>
+        <div class="six columns">
+          <table class="u-full-width">
+            <thead>
+              <tr>
+                <th>Relacion con el atacante:</th>
+                <th>Mujeres:</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td >Desconocido
+                <p id="desconocido">
+
+                </p></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td >Superior Laboral
+                <p id="superior">
+
+                </p></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td >Familiar
+                  <p id="familiar">
+
+                </p></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td >Conocido
+                  <p id="conocido">
+
+                </p></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td >Relacion de pareja
+                  <p id="relacion">
+
+                </p></td>
+                <td></td>
+              </tr>
+            </tbody>
+
+          </table>
+        </div>
+      </div>
+    </div>
+</section>
+<section class="edad">
+    <div class="container">
+      <div class="row">
+        <div class="six columns align">
+        </div>
+        <div class="six columns">
+          <table class="u-full-width">
+            <thead>
+              <tr>
+                <th>Edad :</th>
+                <th>Mujeres:</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td >Menos de 15 años
+                <p id="desconocido">
+
+                </p></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td >Entre 15 y 20 años
+                <p id="superior">
+
+                </p></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td >Entre 20 y 25 años
+                  <p id="familiar">
+
+                </p></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td >Entre 25 y 30 años
+                  <p id="conocido">
+
+                </p></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td >Mayor de 30 años
+                  <p id="relacion">
+
+                </p></td>
+                <td></td>
+              </tr>
+            </tbody>
+
+          </table>
+        </div>
+      </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+      <div class="row">
+        <div class="six columns align">
+        </div>
+        <div class="six columns">
+          <table class="u-full-width">
+            <thead>
+              <tr>
+                <th>Sitio:</th>
+                <th>Mujeres:</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td >Hogar
+                <p id="hogar">
+
+                </p></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td >Trabajo
+                  <p id="trabajo">
+
+                </p></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td >Sitio Publico
+                  <p id="sitiopublico">
+
+                </p></td>
+                <td></td>
+              </tr>
+            </tbody>
+
+          </table>
+        </div>
+      </div>
+    </div>
+</section>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="six columns">
+        <ul>
+
+        </ul>
+
+      </div>
+      <div class="align six columns">
+        <img class="img-responsive" src="images/violencia-genero.bmp">
+      </div>
+    </div>
+  </div>
+</section>
+
+        <div class="row align">
+          <p>En caso de haber denunciado y haber sido tratada indignamente:</p>
+          <a class="button button-primary" id="entrar"href="reporta_juzgado.html">Continuar</a>
+        </div>
+
+
+
+<footer class="footint">
+  <div class="container">
+    <div class="row">
+      <div class="six columns">
+        <p>Batch9 Dev.F</p>
+      </div>
+      <div class="six columns">
+        <p>Junio/2016</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<!--CDN JQuery-->
+<script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+
+<body>
+
+<input type="button" id="boton" value="Presiona Aqui" onclick="javascript: contador()" />
+   <script src="js/js.js"></script>
+</body>
+
+</html>
