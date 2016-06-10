@@ -52,10 +52,10 @@
         <label for="Cargo">Cargo:</label>
         <input class="u-full-width" type="text" placeholder="Escribe el cargo que ostenta.">
         <label for="Situacion">Percance:</label>
-        <textarea class="u-full-width" placeholder="Describe la situación brevemente(No más de 280 caractéres)."></textarea>
+        <textarea class="u-full-width" placeholder="Describe la situación brevemente."></textarea>
         <label for="Fotografia">Fotografía del funcionario:</label>
-        <input type="file">
-        <input class="button-primary" type="submit" value="Enviar">
+        <input type="file" id="SubeFoto">
+        <button class="button-primary" id="enviar" id="login">Enviar</button>
       </form>
     </div>
     <div class="columns six">
@@ -65,7 +65,11 @@
     </div>
   </div>
     </div>
-      
+</section>
+
+<section id="chatito" class="scroll">
+  <img id="fotoFuncionario"src="">
+  <img id="carga" src="images/carga.gif">
 </section>
 
 <footer class="footint">
@@ -82,6 +86,48 @@
 </footer>
 <!--CDN JQuery-->
 <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyA8YkDdtzyxrSbHthrV8cRc1zwjQWMq1v4",
+    authDomain: "niunamas-1320d.firebaseapp.com",
+    databaseURL: "https://niunamas-1320d.firebaseio.com",
+    storageBucket: "niunamas-1320d.appspot.com",
+  };
+  firebase.initializeApp(config);
+</script>
+<script>
+  var storage = firebase.storage();
+  var storageRef = storage.ref();
+  var imagesRef = storageRef.child('images');
+
+
+$('#enviar').on('click',handleImage);
+
+function handleImage(e){
+  var file = $('#subeFoto').get(0).files[0];
+
+  $('#carga').slideToggle();
+
+  var uploadTask = imagesRef.child(file.name).put(file);
+
+  uploadTask.on('state_changed',function(snapshot){},
+    function(error){
+      console.log(error);
+      $('#carga').slideToggle();
+    },
+    function(){
+      var link = uploadTask.snapshot.downloadURL;
+      $('#fotoFuncionario').attr({src:link}).slideToggle();
+      $('#carga').slideToggle();
+
+    }
+  );
+
+
+} 
+</script>
 
 </body>
 

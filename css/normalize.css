@@ -487,14 +487,10 @@ th {
 .align{
   text-align: center;
 }
-<<<<<<< HEAD
 .edad{
   margin-right: 100px;
   margin-bottom: 200px;
 }
-}
-=======
->>>>>>> fca9180a53af9cb0079b37c4446d54e290d01cfe
 input{
   color:#000;
 }
@@ -502,7 +498,6 @@ footer{
   background-color:#000;
   text-align: center;
   color:#8897dc;
-<<<<<<< HEAD
 }
 #acoso{
   display: inline-block;
@@ -552,6 +547,6 @@ footer{
   display: inline-block;
   float:right;
 }
-=======
-}
->>>>>>> fca9180a53af9cb0079b37c4446d54e290d01cfe
+
+/*CSS de reporte de juzgado*/
+
